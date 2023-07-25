@@ -1,0 +1,14 @@
+[[https://github.com/ROCKTAKEY/flymake-actionlint][https://img.shields.io/github/tag/ROCKTAKEY/flymake-actionlint.svg?style=flat-square]]
+[[file:LICENSE][https://img.shields.io/github/license/ROCKTAKEY/flymake-actionlint.svg?style=flat-square]]
+[[https://codecov.io/gh/ROCKTAKEY/flymake-actionlint?branch=master][https://img.shields.io/codecov/c/github/ROCKTAKEY/flymake-actionlint.svg?style=flat-square]]
+[[https://github.com/ROCKTAKEY/flymake-actionlint/actions][https://img.shields.io/github/actions/workflow/status/ROCKTAKEY/flymake-actionlint/test.yml.svg?branch=master&style=flat-square]]
+* flymake-actionlint: A Flymake handler for actionlint
+Provide =Flymake= handler for [[https://github.com/rhysd/actionlint][actionlint]].
+
+* How to Use?
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'yaml-mode-hook #'flymake-actionlint-action-load-when-actions-file)
+#+END_SRC
+
+* License
+  This package is licensed by The GNU General Public License verson 3 or later. See [[file:LICENSE][LICENSE]].
