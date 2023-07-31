@@ -4,6 +4,7 @@
 [[https://github.com/ROCKTAKEY/flymake-actionlint/actions][https://img.shields.io/github/actions/workflow/status/ROCKTAKEY/flymake-actionlint/test.yml.svg?branch=master&style=flat-square]]
 * flymake-actionlint: A Flymake handler for actionlint
 Provide =Flymake= handler for [[https://github.com/rhysd/actionlint][actionlint]].
+Please install [[https://github.com/rhysd/actionlint][actionlint]] before using this package.
 
 * How to Use?
 #+BEGIN_SRC emacs-lisp
@@ -12,7 +13,7 @@ Provide =Flymake= handler for [[https://github.com/rhysd/actionlint][actionlint]
 =flymake-actionlint-action-load-when-actions-file= automatically turns ~flymake-actionlint~ on
 only when the current file is a yaml file in =.github/workflows/=.
 
-Run =M-x flymake-actionlint-load= if you want to turn ~flymake-actionlint~ on manually.
+Run =M-x flymake-actionlint-load= if you want to turn ~flymake-actionlint~ on manually in current buffer.
 
 * License
   This package is licensed by The GNU General Public License verson 3 or later. See [[file:LICENSE][LICENSE]].

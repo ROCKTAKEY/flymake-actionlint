@@ -54,7 +54,8 @@
 ;; 1 flymake-actionlint: A Flymake handler for actionlint
 ;; ======================================================
 
-;;   Provide `Flymake' handler for [actionlint].
+;;   Provide `Flymake' handler for [actionlint].  Please install
+;;   [actionlint] before using this package.
 
 
 ;; [actionlint] <https://github.com/rhysd/actionlint>
@@ -71,7 +72,7 @@
 ;;   `.github/workflows/'.
 
 ;;   Run `M-x flymake-actionlint-load' if you want to turn
-;;   `flymake-actionlint' on manually.
+;;   `flymake-actionlint' on manually in current buffer.
 
 
 ;; 3 License
