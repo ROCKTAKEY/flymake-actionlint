@@ -9,6 +9,10 @@ Provide =Flymake= handler for [[https://github.com/rhysd/actionlint][actionlint]
 #+BEGIN_SRC emacs-lisp
   (add-hook 'yaml-mode-hook #'flymake-actionlint-action-load-when-actions-file)
 #+END_SRC
+=flymake-actionlint-action-load-when-actions-file= automatically turns ~flymake-actionlint~ on
+only when the current file is a yaml file in =.github/workflows/=.
+
+Run =M-x flymake-actionlint-load= if you want to turn ~flymake-actionlint~ on manually.
 
 * License
   This package is licensed by The GNU General Public License verson 3 or later. See [[file:LICENSE][LICENSE]].
