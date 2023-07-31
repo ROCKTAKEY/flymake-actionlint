@@ -79,7 +79,7 @@
 ;; =========
 
 ;;   This package is licensed by The GNU General Public License verson 3 or
-;;   later. See [LICENSE].
+;;   later.  See [LICENSE].
 
 
 ;; [LICENSE] <file:LICENSE>
