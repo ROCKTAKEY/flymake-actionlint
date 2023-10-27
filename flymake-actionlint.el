@@ -124,7 +124,7 @@ See `flymake-err-line-patterns'.")
 ;;;###autoload
 (defun flymake-actionlint-action-load-when-actions-file ()
   "Load Flymake handler when current file is yaml file for GitHub Actions."
-  (when (flymake-actionlint-actions-file-p (buffer-file-name))
+  (when (and (buffer-file-name) (flymake-actionlint-actions-file-p (buffer-file-name)))
     (flymake-actionlint-load)))
 
 (provide 'flymake-actionlint)
