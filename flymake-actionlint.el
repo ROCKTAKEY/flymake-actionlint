@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: convenience
 
-;; Version: 0.1.0
+;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.1") (flymake-easy "0.0.0"))
 ;; URL: https://github.com/ROCKTAKEY/flymake-actionlint
 
@@ -124,7 +124,7 @@ See `flymake-err-line-patterns'.")
 ;;;###autoload
 (defun flymake-actionlint-action-load-when-actions-file ()
   "Load Flymake handler when current file is yaml file for GitHub Actions."
-  (when (flymake-actionlint-actions-file-p (buffer-file-name))
+  (when (and (buffer-file-name) (flymake-actionlint-actions-file-p (buffer-file-name)))
     (flymake-actionlint-load)))
 
 (provide 'flymake-actionlint)
