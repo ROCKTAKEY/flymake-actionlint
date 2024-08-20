@@ -102,9 +102,19 @@ See `flymake-err-line-patterns'.")
 (defvar flymake-actionlint-executable "actionlint"
   "Executable of `actionlint'.")
 
+(defun flymake-actionlint-config (filename)
+  "Return a list consists of -config-file flag and file path to the actionlint configuration."
+  (let* ((github-dir (file-name-parent-directory (file-name-parent-directory (flymake-get-real-file-name filename))))
+         (yaml (concat github-dir "actionlint.yaml"))
+         (yml (concat github-dir "actionlint.yml")))
+    (cond ((file-exists-p yaml) (list "-config-file" yaml))
+          ((file-exists-p yml) (list "-config-file" yml))
+          (t nil))))
+
 (defun flymake-actionlint-command (filename)
   "Return list command which run `actionlint' to FILENAME."
-  (list flymake-actionlint-executable "-oneline" "-no-color" filename))
+  (let ((config-file (flymake-actionlint-config filename)))
+    (append (list flymake-actionlint-executable "-oneline" "-no-color") config-file (list filename))))
 
 ;;;###autoload
 (defun flymake-actionlint-load ()
