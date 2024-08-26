@@ -9,6 +9,7 @@ Please install [[https://github.com/rhysd/actionlint][actionlint]] before using 
 * How to Use?
 #+BEGIN_SRC emacs-lisp
   (add-hook 'yaml-mode-hook #'flymake-actionlint-action-load-when-actions-file)
+  (add-hook 'yaml-ts-mode-hook #'flymake-actionlint-action-load-when-actions-file)
 #+END_SRC
 =flymake-actionlint-action-load-when-actions-file= automatically turns ~flymake-actionlint~ on
 only when the current file is a yaml file in =.github/workflows/=.
