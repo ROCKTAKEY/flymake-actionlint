@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: convenience
 
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; Package-Requires: ((emacs "24.1") (flymake-easy "0.0.0"))
 ;; URL: https://github.com/ROCKTAKEY/flymake-actionlint
 
