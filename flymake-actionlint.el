@@ -112,7 +112,8 @@ See `flymake-err-line-patterns'.")
   (interactive)
   (flymake-easy-load 'flymake-actionlint-command
                      flymake-actionlint-err-line-patterns
-                     'tempdir
+                     ;; Should be `inplace' in order to load ".github/actionlint.yaml" or ".github/actionlint.yml"
+                     'inplace
                      "yaml"))
 
 ;;;###autoload
